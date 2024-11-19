@@ -1,0 +1,203 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfpwf6thusdxn"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_lwiex"]
+[ext_resource type="Texture2D" uid="uid://bw7chbpqvsxqx" path="res://Sprites/TherapyBG.jpg" id="2_uwi1x"]
+[ext_resource type="Texture2D" uid="uid://nvmkvjqh4q8o" path="res://Sprites/CharacterProfiles/Sarah.png" id="3_6kwhj"]
+[ext_resource type="Texture2D" uid="uid://heodd2kv3cix" path="res://Sprites/CharacterProfiles/Jacob.png" id="4_pmgpt"]
+[ext_resource type="Texture2D" uid="uid://g0vv8bjiopmx" path="res://Sprites/CharacterProfiles/Chris.png" id="5_obr6o"]
+[ext_resource type="Texture2D" uid="uid://c0odk43frt4eu" path="res://Sprites/Logo.png" id="6_1m40y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3yx0e"]
+bg_color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lwiex")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1919.0
+offset_bottom = 1084.0
+
+[node name="BG" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 1939.0
+offset_bottom = 1090.0
+texture = ExtResource("2_uwi1x")
+
+[node name="MainMenu" type="Control" parent="Control"]
+anchors_preset = 0
+offset_right = 1944.0
+offset_bottom = 1095.0
+
+[node name="PatientSelectionMenu" type="Control" parent="Control/MainMenu"]
+visible = false
+anchors_preset = 0
+offset_right = 1948.0
+offset_bottom = 1093.0
+
+[node name="BackButton" type="Button" parent="Control/MainMenu/PatientSelectionMenu"]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 18.0
+offset_right = 401.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_3yx0e")
+text = "Back"
+
+[node name="ChoosePatientLabel" type="Label" parent="Control/MainMenu/PatientSelectionMenu"]
+layout_mode = 2
+offset_left = 482.0
+offset_top = 7.0
+offset_right = 1492.0
+offset_bottom = 211.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "Choose a Patient"
+horizontal_alignment = 1
+
+[node name="Profile1" type="TextureRect" parent="Control/MainMenu/PatientSelectionMenu"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 146.0
+offset_right = 681.0
+offset_bottom = 994.0
+texture = ExtResource("3_6kwhj")
+
+[node name="Profile2" type="TextureRect" parent="Control/MainMenu/PatientSelectionMenu"]
+layout_mode = 0
+offset_left = 702.0
+offset_top = 146.0
+offset_right = 1267.0
+offset_bottom = 994.0
+texture = ExtResource("4_pmgpt")
+
+[node name="Profile3" type="TextureRect" parent="Control/MainMenu/PatientSelectionMenu"]
+layout_mode = 0
+offset_left = 1286.0
+offset_top = 146.0
+offset_right = 1851.0
+offset_bottom = 994.0
+texture = ExtResource("5_obr6o")
+
+[node name="Patient1" type="Button" parent="Control/MainMenu/PatientSelectionMenu"]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 890.0
+offset_right = 577.0
+offset_bottom = 993.0
+theme_override_font_sizes/font_size = 50
+text = "Patient 1"
+
+[node name="Patient2" type="Button" parent="Control/MainMenu/PatientSelectionMenu"]
+layout_mode = 0
+offset_left = 789.0
+offset_top = 889.0
+offset_right = 1147.0
+offset_bottom = 992.0
+theme_override_font_sizes/font_size = 50
+text = "Patient 2
+"
+
+[node name="Patient3" type="Button" parent="Control/MainMenu/PatientSelectionMenu"]
+layout_mode = 0
+offset_left = 1394.0
+offset_top = 888.0
+offset_right = 1752.0
+offset_bottom = 991.0
+theme_override_font_sizes/font_size = 50
+text = "Patient 3
+"
+
+[node name="StartMenu" type="Control" parent="Control/MainMenu"]
+anchors_preset = 0
+offset_right = 1935.0
+offset_bottom = 1091.0
+
+[node name="TextureRect" type="TextureRect" parent="Control/MainMenu/StartMenu"]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 100.0
+offset_right = 1541.0
+offset_bottom = 462.0
+texture = ExtResource("6_1m40y")
+
+[node name="Start Button" type="Button" parent="Control/MainMenu/StartMenu"]
+layout_mode = 0
+offset_left = 837.0
+offset_top = 470.0
+offset_right = 1160.0
+offset_bottom = 577.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_3yx0e")
+text = "Start"
+
+[node name="TextEdit" type="TextEdit" parent="Control/MainMenu/StartMenu"]
+layout_mode = 0
+offset_left = 455.0
+offset_top = 610.0
+offset_right = 1558.0
+offset_bottom = 980.0
+theme_override_colors/background_color = Color(0.188235, 0.188235, 0.188235, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 36
+text = "												How To Play:
+Take on the role of a therapist. Help patients by talking with them about their problems.
+Write your response in the text box at the top of the screen.
+Press the [send button] to send your response. 
+If you are getting an error response, press the [reset button]
+"
+wrap_mode = 1
+
+[node name="SetAPIKeyMenu" type="Control" parent="Control"]
+visible = false
+anchors_preset = 0
+offset_right = 1931.0
+offset_bottom = 1089.0
+
+[node name="TextEdit" type="TextEdit" parent="Control/SetAPIKeyMenu"]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 362.0
+offset_right = 1568.0
+offset_bottom = 531.0
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+text = "In order to play, you need a Gemini API Key. You can get yours from this link: https://ai.google.dev/gemini-api/docs/api-key"
+editable = false
+wrap_mode = 1
+
+[node name="KeyEdit" type="TextEdit" parent="Control/SetAPIKeyMenu"]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 535.0
+offset_right = 1323.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+placeholder_text = "Input API Key here"
+
+[node name="SendAPIbutton" type="Button" parent="Control/SetAPIKeyMenu"]
+layout_mode = 0
+offset_left = 1329.0
+offset_top = 536.0
+offset_right = 1567.0
+offset_bottom = 607.0
+theme_override_font_sizes/font_size = 35
+text = "Set API Key"
+
+[connection signal="pressed" from="Control/MainMenu/PatientSelectionMenu/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Control/MainMenu/PatientSelectionMenu/Patient1" to="." method="_on_patient_1_pressed"]
+[connection signal="pressed" from="Control/MainMenu/PatientSelectionMenu/Patient2" to="." method="_on_patient_2_pressed"]
+[connection signal="pressed" from="Control/MainMenu/PatientSelectionMenu/Patient3" to="." method="_on_patient_3_pressed"]
+[connection signal="pressed" from="Control/MainMenu/StartMenu/Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Control/SetAPIKeyMenu/SendAPIbutton" to="." method="_on_send_ap_ibutton_pressed"]

@@ -1,0 +1,412 @@
+[gd_scene load_steps=17 format=3 uid="uid://8q77774du7ua"]
+
+[ext_resource type="Script" path="res://Script/Patient2Script.gd" id="1_f81h3"]
+[ext_resource type="Texture2D" uid="uid://bw7chbpqvsxqx" path="res://Sprites/TherapyBG.jpg" id="2_i0t3b"]
+[ext_resource type="Texture2D" uid="uid://disyxutphdxrs" path="res://Sprites/Jacob/Jacob-Neutral.png" id="3_n6xwr"]
+[ext_resource type="Texture2D" uid="uid://dqbhdhicenw0g" path="res://Sprites/BarsPackage/Bars/EmplyBar.png" id="4_rmvov"]
+[ext_resource type="Texture2D" uid="uid://cc6cm7lpqgo8y" path="res://Sprites/BarsPackage/Bars/HealthFill.png" id="5_8issu"]
+[ext_resource type="Script" path="res://Script/ProgressBar.gd" id="6_fgc5k"]
+[ext_resource type="Texture2D" uid="uid://b1uwo25j6vbjq" path="res://Sprites/BarsPackage/Bars/Heart.png" id="7_66ut7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6qyb2"]
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_u2cd3"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_ach21"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_djnfv"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_urr3g"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_v1t8f"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_7gwuk"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_uo211"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_www2n"]
+font_size = 13
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f81h3")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+offset_right = 54.0
+offset_bottom = 23.0
+
+[node name="Label2" type="Label" parent="HBoxContainer3"]
+layout_mode = 2
+text = "Model"
+
+[node name="FinishedLabel" type="Label" parent="HBoxContainer3"]
+visible = false
+layout_mode = 2
+label_settings = SubResource("LabelSettings_6qyb2")
+
+[node name="ModelName" type="Label" parent="HBoxContainer3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "User"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Explicit"
+horizontal_alignment = 1
+
+[node name="SexuallyExplicitOptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "HateSpeech"
+horizontal_alignment = 1
+
+[node name="HateSpeechOptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Harassment"
+horizontal_alignment = 1
+
+[node name="HarassmentOptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "DangerousContent"
+horizontal_alignment = 1
+
+[node name="DangerousContentOptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4/HBoxContainer"]
+layout_mode = 2
+text = "SexuallyExplicit"
+label_settings = SubResource("LabelSettings_u2cd3")
+horizontal_alignment = 1
+
+[node name="SexuallyExplicitStatus" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4/HBoxContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_ach21")
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4/HBoxContainer2"]
+layout_mode = 2
+text = "HateSpeech"
+label_settings = SubResource("LabelSettings_djnfv")
+horizontal_alignment = 1
+
+[node name="HateSpeechStatus" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4/HBoxContainer2"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_urr3g")
+horizontal_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4/HBoxContainer3"]
+layout_mode = 2
+text = "Harassment"
+label_settings = SubResource("LabelSettings_v1t8f")
+horizontal_alignment = 1
+
+[node name="HarassmentStatus" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4/HBoxContainer3"]
+layout_mode = 2
+text = "NEGLIGIBLE"
+label_settings = SubResource("LabelSettings_7gwuk")
+horizontal_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4/HBoxContainer4"]
+layout_mode = 2
+text = "DangerousContent"
+label_settings = SubResource("LabelSettings_uo211")
+horizontal_alignment = 1
+
+[node name="DangerousContentStatus" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4/HBoxContainer4"]
+layout_mode = 2
+text = "NEGLIGIBLE"
+label_settings = SubResource("LabelSettings_www2n")
+horizontal_alignment = 1
+
+[node name="Image UI" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Image UI"]
+layout_mode = 2
+offset_left = 268.0
+offset_top = 192.0
+offset_right = 1052.0
+offset_bottom = 192.0
+scale = Vector2(1.61085, 1.61085)
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Image UI"]
+layout_mode = 2
+offset_left = 173.0
+offset_top = 833.0
+offset_right = 1760.0
+offset_bottom = 1006.0
+
+[node name="UI" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -13.0
+offset_top = -4.0
+offset_right = 1916.0
+offset_bottom = 1073.0
+
+[node name="SpriteBG" type="Sprite2D" parent="UI"]
+position = Vector2(969.5, 543)
+scale = Vector2(1.587, 1.275)
+texture = ExtResource("2_i0t3b")
+
+[node name="MainUI" type="Control" parent="UI"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SpriteAvatar" type="Sprite2D" parent="UI/MainUI"]
+position = Vector2(529, 722)
+scale = Vector2(1.53705, 1.53705)
+texture = ExtResource("3_n6xwr")
+
+[node name="ResetButton" type="Button" parent="UI/MainUI"]
+layout_mode = 0
+offset_left = 797.0
+offset_top = 47.0
+offset_right = 893.0
+offset_bottom = 81.0
+scale = Vector2(1.98954, 1.98954)
+text = "RESET"
+
+[node name="ResponseEdit" type="TextEdit" parent="UI/MainUI"]
+custom_minimum_size = Vector2(400, 80)
+layout_mode = 2
+offset_left = 834.0
+offset_top = 480.0
+offset_right = 1861.0
+offset_bottom = 716.0
+size_flags_horizontal = 3
+theme_override_colors/background_color = Color(0.152941, 0.152941, 0.152941, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Bot Answer
+"
+editable = false
+wrap_mode = 1
+
+[node name="InputEdit" type="TextEdit" parent="UI/MainUI"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 24.0
+offset_right = 776.0
+offset_bottom = 206.0
+theme_override_colors/background_color = Color(0.168627, 0.168627, 0.168627, 1)
+theme_override_font_sizes/font_size = 30
+text = "Insert test here"
+wrap_mode = 1
+
+[node name="SendButton" type="Button" parent="UI/MainUI"]
+layout_mode = 0
+offset_left = 794.0
+offset_top = 131.0
+offset_right = 994.0
+offset_bottom = 199.0
+theme_override_font_sizes/font_size = 40
+text = "Send"
+
+[node name="ProgressBar" type="TextureProgressBar" parent="UI/MainUI"]
+layout_mode = 0
+offset_left = 965.0
+offset_top = 773.0
+offset_right = 1589.0
+offset_bottom = 918.0
+scale = Vector2(1.36, 1)
+texture_under = ExtResource("4_rmvov")
+texture_progress = ExtResource("5_8issu")
+script = ExtResource("6_fgc5k")
+
+[node name="TextureRect" type="TextureRect" parent="UI/MainUI/ProgressBar"]
+layout_mode = 0
+offset_left = -77.941
+offset_top = -48.0
+offset_right = 136.059
+offset_bottom = 148.0
+scale = Vector2(0.735295, 1)
+texture = ExtResource("7_66ut7")
+
+[node name="EmotionLevelLabel" type="Label" parent="UI/MainUI"]
+layout_mode = 0
+offset_left = 1092.0
+offset_top = 912.0
+offset_right = 1653.0
+offset_bottom = 994.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Emotion Level"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="UI/MainUI"]
+layout_mode = 0
+offset_left = 1611.0
+offset_top = 45.0
+offset_right = 1897.0
+offset_bottom = 129.0
+theme_override_font_sizes/font_size = 30
+text = "Back to Main Menu"
+
+[node name="LevelCompleted" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1944.0
+offset_bottom = 1111.0
+
+[node name="ColorRect" type="ColorRect" parent="UI/LevelCompleted"]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 231.0
+offset_right = 1614.0
+offset_bottom = 480.0
+pivot_offset = Vector2(1172, 148)
+color = Color(0, 0.615686, 0, 1)
+
+[node name="Label" type="Label" parent="UI/LevelCompleted"]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 233.0
+offset_right = 1384.0
+offset_bottom = 339.0
+pivot_offset = Vector2(940, 146)
+theme_override_font_sizes/font_size = 60
+text = "Patient Happiness Reached!"
+horizontal_alignment = 1
+
+[node name="BackButton2" type="Button" parent="UI/LevelCompleted"]
+layout_mode = 0
+offset_left = 765.0
+offset_top = 339.0
+offset_right = 1170.0
+offset_bottom = 450.0
+pivot_offset = Vector2(750, 40)
+theme_override_font_sizes/font_size = 30
+text = "Back to Main Menu"
+
+[node name="LevelFailed" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1944.0
+offset_bottom = 1111.0
+
+[node name="ColorRect" type="ColorRect" parent="UI/LevelFailed"]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 231.0
+offset_right = 1614.0
+offset_bottom = 480.0
+pivot_offset = Vector2(1172, 148)
+color = Color(0.666667, 0.184314, 0.231373, 1)
+
+[node name="Label" type="Label" parent="UI/LevelFailed"]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 233.0
+offset_right = 1353.0
+offset_bottom = 339.0
+pivot_offset = Vector2(940, 146)
+theme_override_font_sizes/font_size = 60
+text = "Patient Satisfaction Failed!"
+horizontal_alignment = 1
+
+[node name="ResetButton2" type="Button" parent="UI/LevelFailed"]
+layout_mode = 0
+offset_left = 676.0
+offset_top = 347.0
+offset_right = 791.0
+offset_bottom = 390.0
+scale = Vector2(1.98954, 1.98954)
+text = "RESET"
+
+[node name="BackButton2" type="Button" parent="UI/LevelFailed"]
+layout_mode = 0
+offset_left = 971.0
+offset_top = 348.0
+offset_right = 1315.0
+offset_bottom = 434.0
+pivot_offset = Vector2(750, 40)
+theme_override_font_sizes/font_size = 30
+text = "Back to Main Menu"
+
+[connection signal="HappinessChanged" from="." to="UI/MainUI/ProgressBar" method="_on_control_happiness_changed"]
+[connection signal="pressed" from="UI/MainUI/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="UI/MainUI/SendButton" to="." method="_on_send_button_pressed"]
+[connection signal="pressed" from="UI/MainUI/BackButton" to="." method="_on_back_button_pressed"]
